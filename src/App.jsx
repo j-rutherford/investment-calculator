@@ -25,7 +25,11 @@ function App() {
     <>
       <Header />
       <UserInput onChangeInput={handleChange} userInput={userInput} />
-      {inputIsValid ? <Results input={userInput} />: <p className="center">Please enter a duration greater than zero.</p>}
+      {inputIsValid ? (
+        <Results input={userInput} />
+      ) : (
+        <p className="center">Please enter a duration greater than zero.</p>
+      )}
     </>
   );
 }
